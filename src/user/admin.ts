@@ -69,7 +69,7 @@ module.exports = function (User: any) {
             usersData.forEach((user, index) => {
                 line += `${fields.map(field => user[field]).join(',')}`;
                 if (showIps) {
-                    userIPs = ips[index] ? ips[index].split(',').join(',') : '';
+                    userIPs = ips[index] ? ips[index].join(',') : '';
                     line += `,"${userIPs}"\n`;
                 } else {
                     line += '\n';
@@ -84,3 +84,4 @@ module.exports = function (User: any) {
         await fd.close();
     };
 };
+
