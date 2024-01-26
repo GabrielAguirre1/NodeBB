@@ -1,3 +1,5 @@
+// roughly 90% of thise code is from ChatGPT, i modifed small chunks of it
+
 import * as fs from 'fs';
 import * as path from 'path';
 import * as winston from 'winston';
@@ -84,4 +86,3 @@ module.exports = function (User: any) {
         await fd.close();
     };
 };
-
